@@ -26,6 +26,7 @@ EggHatchSpeedMultiplier=2.0
 BabyCuddleIntervalMultiplier=0.6
 BabyImprintAmountMultiplier=2.0
 HexagonRewardMultiplier=1.0
+EOF
 
       - name: Änderungen committen und pushen
         run: |
@@ -34,3 +35,4 @@ HexagonRewardMultiplier=1.0
           git add dynamictest.txt
           git commit -m "Automatische Aktualisierung der dynamictest.txt" || echo "Keine Änderungen"
           git push
+
