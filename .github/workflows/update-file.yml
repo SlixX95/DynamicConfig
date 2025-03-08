@@ -19,14 +19,14 @@ jobs:
       - name: dynamictest.txt aktualisieren
         run: |
           echo "Aktualisiere dynamictest.txt mit den neuen Werten..."
-          echo "HarvestAmountMultiplier=2.5" > dynamictest.txt
-          echo "TamingSpeedMultiplier=5.0" >> dynamictest.txt
-          echo "XPMultiplier=2.5" >> dynamictest.txt
-          echo "MatingIntervalMultiplier=0.02" >> dynamictest.txt
-          echo "BabyMatureSpeedMultiplier=40.0" >> dynamictest.txt
-          echo "EggHatchSpeedMultiplier=60.0" >> dynamictest.txt
+          echo "HarvestAmountMultiplier=50" > dynamictest.txt
+          echo "TamingSpeedMultiplier=10.0" >> dynamictest.txt
+          echo "XPMultiplier=5" >> dynamictest.txt
+          echo "MatingIntervalMultiplier=0.2" >> dynamictest.txt
+          echo "BabyMatureSpeedMultiplier=60.0" >> dynamictest.txt
+          echo "EggHatchSpeedMultiplier=40.0" >> dynamictest.txt
           echo "BabyImprintAmountMultiplier=20.0" >> dynamictest.txt
-          echo "HexagonRewardMultiplier=1.0" >> dynamictest.txt
+          echo "HexagonRewardMultiplier=2.0" >> dynamictest.txt
           echo "DynamicColorset=LightYellow,Yellow,Custard,GreenSlate,Sage,DarkTurquoise,Orange,Coral,DragonFire,Glacial,Teal,DragonGreen3,DinoLightRed,LightRed,Vermillion,DarkMagenta,DarkViolet,LemonLime" >> dynamictest.txt
 
       - name: Änderungen committen und pushen
