@@ -28,7 +28,7 @@ jobs:
           echo "BabyImprintAmountMultiplier=20.0" >> dynamictest.txt
           echo "HexagonRewardMultiplier=1.0" >> dynamictest.txt
 	  echo "DynamicColorset=LightYellow,Yellow,Custard,GreenSlate,Sage,DarkTurquoise,Orange,Coral,DragonFire,Glacial,Teal,DragonGreen3,DinoLightRed,LightRed,Vermillion,DarkMagenta,DarkViolet,LemonLime" >> dynamictest.txt
-
+   
       - name: Änderungen committen und pushen
         run: |
           git config --global user.name "GitHub Actions"
