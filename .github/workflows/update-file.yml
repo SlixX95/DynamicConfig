@@ -17,18 +17,18 @@ jobs:
         uses: actions/checkout@v3
 
       - name: dynamictest.txt aktualisieren
-        run: |
+        run: |0
           echo "Aktualisiere dynamictest.txt mit den neuen Werten..."
           cat > dynamictest.txt <<'EOF'
-          HarvestAmountMultiplier=2.5
-          TamingSpeedMultiplier=5.0
-          XPMultiplier=2.5
-          MatingIntervalMultiplier=0.02
-          BabyMatureSpeedMultiplier=40.0
-          EggHatchSpeedMultiplier=60.0
-          BabyImprintAmountMultiplier=20.0
-          HexagonRewardMultiplier=1.0
-          EOF
+HarvestAmountMultiplier=2.5
+TamingSpeedMultiplier=5.0
+XPMultiplier=2.5
+MatingIntervalMultiplier=0.02
+BabyMatureSpeedMultiplier=40.0
+EggHatchSpeedMultiplier=60.0
+BabyImprintAmountMultiplier=20.0
+HexagonRewardMultiplier=1.0
+EOF
 
       - name: Änderungen committen und pushen
         run: |
@@ -37,5 +37,6 @@ jobs:
           git add dynamictest.txt
           git commit -m "Automatische Aktualisierung der dynamictest.txt" || echo "Keine Änderungen"
           git push
+
 
 
