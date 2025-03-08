@@ -19,7 +19,7 @@ jobs:
       - name: dynamictest.txt aktualisieren
         run: |
           echo "Aktualisiere dynamictest.txt mit den neuen Werten..."
-          echo "TamingSpeedMultiplier=1.0" > dynamictest.txt
+          echo "TamingSpeedMultiplier=5000.0" > dynamictest.txt
           echo "HarvestAmountMultiplier=1.0" >> dynamictest.txt
           echo "XPMultiplier=2.0" >> dynamictest.txt
           echo "MatingIntervalMultiplier=0.5" >> dynamictest.txt
