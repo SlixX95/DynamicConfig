@@ -5,7 +5,7 @@ permissions:
 
 on:
   schedule:
-    - cron: '0 12 * * *'  # Täglich um 12:00 UTC – passe den Zeitplan bei Bedarf an
+    - cron: '0 12 * * *'
   workflow_dispatch:
 
 jobs:
@@ -17,18 +17,16 @@ jobs:
         uses: actions/checkout@v3
 
       - name: dynamictest.txt aktualisieren
-        run:
+        run: |
           echo "Aktualisiere dynamictest.txt mit den neuen Werten..."
-          cat > dynamictest.txt <<'EOF'
-HarvestAmountMultiplier=2.5
-TamingSpeedMultiplier=5.0
-XPMultiplier=2.5
-MatingIntervalMultiplier=0.02
-BabyMatureSpeedMultiplier=40.0
-EggHatchSpeedMultiplier=60.0
-BabyImprintAmountMultiplier=20.0
-HexagonRewardMultiplier=1.0
-EOF
+          echo "HarvestAmountMultiplier=2.5" > dynamictest.txt
+          echo "TamingSpeedMultiplier=5.0" >> dynamictest.txt
+          echo "XPMultiplier=2.5" >> dynamictest.txt
+          echo "MatingIntervalMultiplier=0.02" >> dynamictest.txt
+          echo "BabyMatureSpeedMultiplier=40.0" >> dynamictest.txt
+          echo "EggHatchSpeedMultiplier=60.0" >> dynamictest.txt
+          echo "BabyImprintAmountMultiplier=20.0" >> dynamictest.txt
+          echo "HexagonRewardMultiplier=1.0" >> dynamictest.txt
 
       - name: Änderungen committen und pushen
         run: |
