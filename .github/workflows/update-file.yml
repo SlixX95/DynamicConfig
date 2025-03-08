@@ -1,4 +1,4 @@
-name: Update Textdatei
+name: Update Dynamictest Datei
 
 on:
   schedule:
@@ -13,10 +13,10 @@ jobs:
       - name: Repository auschecken
         uses: actions/checkout@v3
 
-      - name: Textdatei aktualisieren
+      - name: dynamictest.txt aktualisieren
         run: |
           echo "Aktualisiere dynamictest.txt mit den neuen Werten..."
-          cat > textdatei.txt << 'EOF'
+          cat > dynamictest.txt <<'EOF'
 TamingSpeedMultiplier=1.0
 HarvestAmountMultiplier=1.0
 XPMultiplier=2.0
@@ -26,12 +26,11 @@ EggHatchSpeedMultiplier=2.0
 BabyCuddleIntervalMultiplier=0.6
 BabyImprintAmountMultiplier=2.0
 HexagonRewardMultiplier=1.0
-EOF
 
       - name: Änderungen committen und pushen
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add dynamictest.txt
-          git commit -m "Automatische Aktualisierung der Textdatei" || echo "Keine Änderungen"
+          git commit -m "Automatische Aktualisierung der dynamictest.txt" || echo "Keine Änderungen"
           git push
