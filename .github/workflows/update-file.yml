@@ -2,8 +2,8 @@ name: Update Dynamictest Datei
 
 on:
   schedule:
-    - cron: '0 12 * * *'  # Täglich um 12:00 UTC – passe den Zeitplan bei Bedarf an
-  workflow_dispatch:     # Ermöglicht auch manuelles Auslösen
+    - cron: '0 12 * * *'
+  workflow_dispatch:
 
 jobs:
   update-file:
@@ -16,17 +16,15 @@ jobs:
       - name: dynamictest.txt aktualisieren
         run: |
           echo "Aktualisiere dynamictest.txt mit den neuen Werten..."
-          cat > dynamictest.txt <<'EOF'
-TamingSpeedMultiplier=1.0
-HarvestAmountMultiplier=1.0
-XPMultiplier=2.0
-MatingIntervalMultiplier=0.5
-BabyMatureSpeedMultiplier=2.0
-EggHatchSpeedMultiplier=2.0
-BabyCuddleIntervalMultiplier=0.6
-BabyImprintAmountMultiplier=2.0
-HexagonRewardMultiplier=1.0
-EOF
+          echo "TamingSpeedMultiplier=1.0" > dynamictest.txt
+          echo "HarvestAmountMultiplier=1.0" >> dynamictest.txt
+          echo "XPMultiplier=2.0" >> dynamictest.txt
+          echo "MatingIntervalMultiplier=0.5" >> dynamictest.txt
+          echo "BabyMatureSpeedMultiplier=2.0" >> dynamictest.txt
+          echo "EggHatchSpeedMultiplier=2.0" >> dynamictest.txt
+          echo "BabyCuddleIntervalMultiplier=0.6" >> dynamictest.txt
+          echo "BabyImprintAmountMultiplier=2.0" >> dynamictest.txt
+          echo "HexagonRewardMultiplier=1.0" >> dynamictest.txt
 
       - name: Änderungen committen und pushen
         run: |
@@ -35,4 +33,5 @@ EOF
           git add dynamictest.txt
           git commit -m "Automatische Aktualisierung der dynamictest.txt" || echo "Keine Änderungen"
           git push
+
 
