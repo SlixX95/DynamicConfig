@@ -19,7 +19,7 @@ jobs:
       - name: dynamictest.ini aktualisieren
         run: |
           echo "Aktualisiere dynamictest.ini mit den neuen Werten..."
-          echo "HarvestAmountMultiplier=50.0" > dynamictest.ini
+          echo "HarvestAmountMultiplier=500.0" > dynamictest.ini
           echo "TamingSpeedMultiplier=10.0" >> dynamictest.ini
           echo "XPMultiplier=5.0" >> dynamictest.ini
           echo "MatingIntervalMultiplier=0.2" >> dynamictest.ini
