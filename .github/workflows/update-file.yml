@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: dynamictest.txt aktualisieren
-        run: |0
+        run:
           echo "Aktualisiere dynamictest.txt mit den neuen Werten..."
           cat > dynamictest.txt <<'EOF'
 HarvestAmountMultiplier=2.5
