@@ -36,5 +36,14 @@ jobs:
           git commit -m "Automatische Aktualisierung der dynamictest.txt" || echo "Keine Änderungen"
           git push
 
+      - name: Webhook auslösen
+        run: |
+          echo "Webhook wird ausgelöst..."
+          curl -X POST https://dash.gameserverapp.com/system-api/v2/task/72226/execute \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer 32343433" \
+            -d "{\"message\": \"dynamictest.txt updated\", \"timestamp\": \"$(date)\"}"
+
+
 
 
